@@ -1,0 +1,21 @@
+{{ define "adminPanel" }}
+    {{ if .isadmin }}
+        <form action="/queues/{{ .title }}" method="POST" class="wide">
+            <fieldset>
+                <legend>Super secret admin panel</legend>
+                {{ if .open }}
+                    <input type="submit" name="action" value="Close">
+                {{ else }}
+                    <input type="submit" name="action" value="Open">
+                {{ end }}
+                <input type="text" name="removeId" placeholder="Enter user id to remove here...">
+                <input type="submit" name="action" value="Remove">
+                <input type="text" name="text" placeholder="Enter new display text here...">
+                <input type="submit" name="action" value="Text">
+                <input type="text" name="message" placeholder="Enter message to send to queuers here...">
+                <input type="submit" name="action" value="Message">
+            </fieldset>
+        </form>
+    {{ end }}
+{{ end }}
+

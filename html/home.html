@@ -1,0 +1,22 @@
+{{ define "content" }}
+    <div class="center">
+        {{ range .queues }}
+            {{ if .Open }}
+                <div class="qc">
+                    <a class="open" href="/queues/{{ .Title }}">
+                        {{ .Title }}
+                    </a>
+                    <p class="open">{{ .InQueue }} 🫂</p>
+                </div>
+            {{ else }}
+                <div class="qc">
+                    <a class="closed" href="/queues/{{ .Title }}">
+                        🔒{{ .Title }}
+                    </a>
+                    <p class="closed">{{ .InQueue }} 🫂</p>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}
+

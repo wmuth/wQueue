@@ -1,0 +1,29 @@
+{{ define "openForm" }}
+    <form action="/queues/{{ .title }}" method="POST" class="flexl">
+        <label for="location">Location:</label>
+        <br>
+        {{ if or (not .loggedin) .inqueue }}
+            <input type="text" style="background-color:999" id="location" name="location" disabled>
+        {{ else }}
+            <input type="text" id="location" name="location" required>
+        {{ end }}
+        <label for="comment">Comment:</label>
+        <br>
+        {{ if or (not .loggedin) .inqueue }}
+            <input type="text" style="background-color:999" id="comment" name="comment" disabled>
+        {{ else }}
+            <input type="text" id="comment" name="comment" required>
+        {{ end }}
+        <br>
+        {{ if .loggedin }}
+            {{ if .inqueue }}
+                <input type="hidden" name="leave" value="1">
+                <input type="submit" value="Leave Queue">
+            {{ else }}
+                <input type="submit" value="Join queue">
+            {{ end }}
+        {{ else }}
+                <input type="submit" value="Please log in to join the queue" disabled>
+        {{ end }}
+    </form>
+{{ end }}

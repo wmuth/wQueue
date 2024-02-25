@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #ddd;
+    padding: 0.75em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #ddd;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 0.75em;
+}
+
+
+.logo {
+    font-size: 1.5em;
+}
+
+.centerBlock {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.left {
+  display: inline-block;
+  text-align: left;
+}
+
+.qc {
+  margin: 2% 15% 2% 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.open {
+  color: blue;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.closed {
+  color: red;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.container {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexl {
+  flex: 0 0 25%;
+}
+
+.flexm {
+  flex: 0 0 50%;
+}
+
+.flexr {
+  flex: 0 0 75%;
+}
+
+.wide {
+  width: 75%;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+table {
+  margin-left: 2%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: inherit;
+}
+
+thead th {
+  border-bottom: 2px solid black;
+}
+
+fieldset {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+  background-color: #333;
+  margin-bottom: 2%;
+  color: #ddd;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+  margin: 4%;
+}
+
+input[type="submit"] {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #006080;
+}
+
+input[type="submit"]:disabled {
+    background-color: #696969;
+}

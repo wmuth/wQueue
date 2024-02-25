@@ -1,0 +1,12 @@
+{{ define "closedForm" }}
+    <form action="/queues/{{ .title }}" method="POST" class="flexl">
+        <label>Location:</label>
+        <br>
+        <input type="text" style="background-color:999" id="location" name="location" disabled>
+        <label>Comment:</label>
+        <br>
+        <input type="text" style="background-color:999" id="comment" name="comment" disabled>
+        <br>
+        <input type="submit" value="🔒 Queue is locked" disabled>
+    </form>
+{{ end }}

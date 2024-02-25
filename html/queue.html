@@ -1,0 +1,45 @@
+{{ define "content" }}
+    {{ template "wsScript" . }}
+    {{ if .open }}
+        <div class="container">
+          <div class="row around">
+              {{ template "adminPanel" . }}
+          </div>
+            <div class="row">
+                <h1 class="flexl" style="color:blue">{{ .title }}</h1>
+                <h2 class="flexr" style="color:grey">{{ .message }}</h2>
+            </div>
+            <div class="row">
+                {{ template "openForm" . }}
+                <div class="flexr">
+                    {{ if len .qitems }}
+                        {{ template "qTable" . }}
+                    {{ else }}
+                        <h3 style="margin-left:2%">This queue is empty</h3>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ else }}
+        <div class="container">
+            <div class="row around">
+                {{ template "adminPanel" . }}
+            </div>
+            <div class="row">
+                <h1 class="flexl" style="color:red">{{ .title }} 🔒</h1>
+                <h2 class="flexr" style="color:grey">{{ .message }}</h2>
+            </div>
+            <div class="row">
+                {{ template "closedForm" . }}
+                <div class="flexr">
+                    {{ if len .qitems }}
+                        {{ template "qTable" . }}
+                    {{ else }}
+                        <h3 style="margin-left:2%">This queue is empty</h3>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
+

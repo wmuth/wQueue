@@ -1,0 +1,17 @@
+{{ define "content" }}
+    <div class="centerBlock">
+        <div class="left">
+            <h1>Help and FAQ</h1>
+            <h2>Any questions not answered here? Contact muth@kth.se</h2>
+            <br>
+            {{ if eq .log "Login" }}
+                <h3>Guests</h3>
+                <p>You are not logged in. You can view queues, which is cool, but you can not join.</p>
+            {{ else }}
+                <h3>Users</h3>
+                <p>You are logged in! You can view queues, which is cool and you can even join them! Wow!</p>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}
+
